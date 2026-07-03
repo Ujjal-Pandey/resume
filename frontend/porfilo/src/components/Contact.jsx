@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-900 text-gray-100 scroll-mt-16 relative overflow-hidden">
+    <section id="contact" className="py-16 bg-slate-900 text-gray-100 scroll-mt-16 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10"></div>
@@ -100,7 +100,7 @@ const Contact = () => {
               {[
                 { Icon: FaGithub, href: "https://github.com/Ujjal-Pandey", label: "GitHub", bgHover: "hover:bg-slate-600 hover:text-white" },
                 { Icon: FaFacebook, href: "https://www.facebook.com/ujjal.pandey.929038/", label: "Facebook", bgHover: "hover:bg-blue-600" },
-                { Icon: FaLinkedin, href: "#", label: "LinkedIn", bgHover: "hover:bg-cyan-500" }
+                { Icon: FaLinkedin, href: "https://www.linkedin.com/in/ujjal-pandey-9a5b953a9/", label: "LinkedIn", bgHover: "hover:bg-cyan-500" }
               ].map((social, i) => (
                 <motion.a 
                   key={i}

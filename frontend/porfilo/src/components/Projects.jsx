@@ -10,7 +10,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=400&fit=crop",
       tags: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS", "Payment Gateway"],
       github: "https://github.com/Ujjal-Pandey/Ecommerce-website-mern-stack-",
-      demo: "https://ecommerce-website-mern-stack-yta5-three.vercel.app/"
+      demo: "https://ecommerce-website-mern-stack-gamma.vercel.app/"
     },
     {
       title: "IT Management System (EventHub)",
@@ -22,28 +22,28 @@ const Projects = () => {
     },
     {
       title: "Password Size Photo Generator",
-      description: "A utility tool that generates passport-sized photos from any image. Simply upload your photo, and the application automatically crops, resizes, and formats it to passport size specifications. Perfect for documents, applications, and identification needs.",
+      description: "A utility tool that generates passport-sized photos from any image. Simply upload your photo, and the application automatically crops, resizes, and formats it to passport-size specifications. Perfect for documents, applications, and identification needs.",
       image: "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=800&h=400&fit=crop",
       tags: ["React", "Canvas API", "Image Processing", "TailwindCSS"],
       github: "https://github.com/Ujjal-Pandey/Password-size-Photo",
-      demo: "#"
+      demo: "https://password-size-photo-b962.vercel.app/"
     }
   ];
 
   return (
-    <section id="projects" className="py-24 bg-black text-gray-100 scroll-mt-16 relative overflow-hidden">
+    <section id="projects" className="py-16 bg-black text-gray-100 scroll-mt-16 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <span className="text-cyan-400 font-semibold tracking-wider text-sm uppercase">Portfolio</span>
           <h2 className="text-4xl md:text-6xl font-bold mt-2 text-white">Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Work</span></h2>
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">My latest and most advanced projects, focusing on scalable architecture and premium aesthetics.</p>
         </div>
         
-        <div className="grid md:grid-cols-1 gap-12 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, idx) => (
             <motion.div 
               key={idx}
@@ -52,11 +52,11 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
               whileHover={{ y: -10 }}
-              className="bg-slate-800/60 backdrop-blur-sm border-2 border-cyan-500/20 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:border-cyan-400/50 transition-all duration-500 group"
+              className="bg-slate-800/60 backdrop-blur-sm border border-cyan-500/12 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:border-cyan-400/30 transition-all duration-400 group flex flex-col"
             >
-              <div className="relative overflow-hidden h-72 md:h-96 w-full bg-slate-900">
-                <img src={project.image} className="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-out" alt={project.title} />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div className="relative overflow-hidden h-44 md:h-52 w-full bg-slate-900">
+                <img src={project.image} className="w-full h-full object-cover group-hover:scale-105 transition duration-500 ease-out" alt={project.title} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -68,12 +68,12 @@ const Projects = () => {
                   </span>
                 </motion.div>
               </div>
-              <div className="p-8 md:p-12 relative z-20 bg-slate-800/30">
+              <div className="p-4 md:p-6 relative z-20 bg-slate-800/30 flex-1 flex flex-col">
                 <motion.h3 
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  className="text-3xl md:text-4xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors"
+                  className="text-2xl md:text-2xl font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors"
                 >
                   {project.title}
                 </motion.h3>
@@ -81,8 +81,8 @@ const Projects = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                  className="text-gray-400 text-lg leading-relaxed mb-8"
+                  transition={{ delay: 0.05 }}
+                  className="text-gray-400 text-sm leading-relaxed mb-4 flex-1"
                 >
                   {project.description}
                 </motion.p>
@@ -100,7 +100,7 @@ const Projects = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 + tagIdx * 0.05 }}
-                      className="px-4 py-1.5 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-semibold border-2 border-cyan-500/40 hover:border-cyan-400 hover:bg-cyan-500/30 transition-all cursor-default"
+                      className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-semibold border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/30 transition-all cursor-default"
                     >
                       {tag}
                     </motion.span>
@@ -119,7 +119,7 @@ const Projects = () => {
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center justify-center gap-2 px-8 py-3.5 bg-slate-700/80 text-white rounded-full hover:bg-slate-600 transition font-semibold shadow-lg border border-slate-600/50 hover:border-cyan-400/50"
+                    className="flex items-center justify-center gap-2 px-4 py-2 bg-slate-700/80 text-white rounded-full hover:bg-slate-600 transition font-semibold shadow-sm border border-slate-600/40 hover:border-cyan-400/50"
                   >
                     <FaGithub className="text-xl" /> View Code
                   </motion.a>
@@ -129,7 +129,7 @@ const Projects = () => {
                     href={project.demo}
                     target={project.demo !== "#" ? "_blank" : undefined}
                     rel={project.demo !== "#" ? "noopener noreferrer" : undefined}
-                    className="flex items-center justify-center gap-2 px-8 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full hover:from-cyan-600 hover:to-blue-600 transition font-semibold shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full hover:from-cyan-600 hover:to-blue-600 transition font-semibold shadow-sm hover:shadow-md"
                   >
                     <FaExternalLinkAlt /> Live Demo
                   </motion.a>

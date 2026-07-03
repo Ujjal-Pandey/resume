@@ -4,7 +4,7 @@ import { FaPalette, FaServer, FaDatabase } from 'react-icons/fa';
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-gradient-to-b from-black via-slate-900 to-slate-800 scroll-mt-16 relative overflow-hidden">
+    <section id="skills" className="py-16 bg-gradient-to-b from-black via-slate-900 to-slate-800 scroll-mt-16 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10"></div>

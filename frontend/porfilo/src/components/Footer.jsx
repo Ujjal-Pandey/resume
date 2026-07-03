@@ -31,7 +31,7 @@ const Footer = () => {
               {[
                 { Icon: FaGithub, href: "https://github.com/Ujjal-Pandey", label: "GitHub" },
                 { Icon: FaFacebook, href: "https://www.facebook.com/ujjal.pandey.929038/", label: "Facebook" },
-                { Icon: FaLinkedin, href: "#", label: "LinkedIn" }
+                { Icon: FaLinkedin, href: "https://www.linkedin.com/in/ujjal-pandey-9a5b953a9/", label: "LinkedIn" }
               ].map((social, i) => (
                 <motion.a 
                   key={i}
